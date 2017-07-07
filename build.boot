@@ -1,5 +1,5 @@
 (def project 'sooheon/boot-gorilla)
-(def version "0.1.0-SNAPSHOT")
+(def version "0.1.1-SNAPSHOT")
 
 (set-env! :resource-paths #{"src"}
           :dependencies   '[[org.clojure/clojure "1.8.0"]
@@ -23,3 +23,5 @@
 
 (require '[sooheon.boot-gorilla :refer [gorilla]]
          '[adzerk.bootlaces :refer :all])
+
+(bootlaces! version)
