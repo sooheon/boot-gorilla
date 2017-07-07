@@ -5,15 +5,15 @@ A Boot task to start [Gorilla REPL](http://gorilla-repl.org/)
 
 ## Thanks
 
-This project is a fork of [mathias/boot-gorilla](https://github.com/mathias/boot-gorilla)
-and was an exercise to get to know boot's internals a bit better. Thanks to
-`mathias` for doing the hard work :)
+This project is a fork of [ckampfe/boot-gorilla](https://github.com/ckampfe/boot-gorilla),
+which is a fork of [mathias/boot-gorilla](https://github.com/mathias/boot-gorilla). Thanks
+to `mathias` and `ckampfe` for doing the hard work :)
 
 
 ## Usage
 
-To use this in your project, add `[ckampfe/boot-gorilla "0.1.0-SNAPSHOT"]` to your `:dependencies`
-and then require the task: `(require '[ckampfe.boot-gorilla :refer [gorilla]])`
+To use this in your project, add `[sooheon/boot-gorilla "0.1.0-SNAPSHOT"]` to your `:dependencies`
+and then require the task: `(require '[sooheon.boot-gorilla :refer [gorilla]])`
 
 Run the task from your project directly like: `boot gorilla -b`
 
@@ -33,7 +33,7 @@ Options:
 
 ## License
 
-Copyright © 2016
+Copyright © 2017
 
-Distributed under the Eclipse Public License either version 1.0 or (at
-your option) any later version.
+Distributed under the Eclipse Public License either version 1.0 or (at your option) any
+later version.
