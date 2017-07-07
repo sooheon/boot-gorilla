@@ -4,7 +4,8 @@
 (set-env! :resource-paths #{"src"}
           :dependencies   '[[org.clojure/clojure "1.8.0"]
                             [boot/core "RELEASE" :scope "test"]
-                            [gorilla-repl "0.4.0"]])
+                            [gorilla-repl "0.4.0"]
+                            [adzerk/bootlaces "0.1.13" :scope "test"]])
 
 (task-options!
  pom {:project     project
@@ -20,4 +21,5 @@
   []
   (comp (pom) (jar) (install)))
 
-(require '[sooheon.boot-gorilla :refer [gorilla]])
+(require '[sooheon.boot-gorilla :refer [gorilla]]
+         '[adzerk.bootlaces :refer :all])
