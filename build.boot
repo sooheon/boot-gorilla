@@ -4,7 +4,7 @@
 (set-env! :resource-paths #{"src"}
           :dependencies   '[[org.clojure/clojure "1.9.0-alpha17"]
                             [boot/core "RELEASE" :scope "test"]
-                            [gorilla-repl "0.4.0"]
+                            [sooheon/gorilla-repl "0.4.1-SNAPSHOT"]
                             [adzerk/bootlaces "0.1.13" :scope "test"]])
 
 (task-options!
