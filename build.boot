@@ -2,7 +2,7 @@
 (def version "0.1.1-SNAPSHOT")
 
 (set-env! :resource-paths #{"src"}
-          :dependencies   '[[org.clojure/clojure "1.8.0"]
+          :dependencies   '[[org.clojure/clojure "1.9.0-alpha17"]
                             [boot/core "RELEASE" :scope "test"]
                             [gorilla-repl "0.4.0"]
                             [adzerk/bootlaces "0.1.13" :scope "test"]])
