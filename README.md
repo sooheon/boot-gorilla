@@ -12,7 +12,7 @@ to `mathias` and `ckampfe` for doing the hard work :)
 
 ## Usage
 
-To use this in your project, add `[sooheon/boot-gorilla "0.1.0-SNAPSHOT"]` to your `:dependencies`
+To use this in your project, add `[sooheon/boot-gorilla "0.1.1-SNAPSHOT"]` to your `:dependencies`
 and then require the task: `(require '[sooheon.boot-gorilla :refer [gorilla]])`
 
 Run the task from your project directly like: `boot gorilla -b`
