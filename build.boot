@@ -21,7 +21,6 @@
   []
   (comp (pom) (jar) (install)))
 
-(require '[sooheon.boot-gorilla :refer [gorilla]]
-         '[adzerk.bootlaces :refer :all])
+(require '[adzerk.bootlaces :refer :all])
 
 (bootlaces! version)
