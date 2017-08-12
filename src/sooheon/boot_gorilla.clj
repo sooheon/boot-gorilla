@@ -19,7 +19,7 @@
     (comp
      (boot/with-pre-wrap fileset
        (boot.pod/with-eval-in env
-         (boot.pod/add-dependencies (assoc boot.pod/env :depenencies '[[gorilla-repl "0.4.0"]]))
+         (boot.pod/add-dependencies (assoc boot.pod/env :depenencies '[[sooheon/gorilla-repl "0.4.1-SNAPSHOT"]]))
          (require '[gorilla-repl.core :as g])
          (g/run-gorilla-server {:port ~port
                                 :ip ~ip
