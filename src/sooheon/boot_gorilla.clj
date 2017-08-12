@@ -3,7 +3,7 @@
   {:boot/export-tasks true}
   (:require [boot.core :as boot :refer [deftask]]))
 
-(def gorilla-version "0.4.0")
+(def gorilla-version "0.4.1-SNAPSHOT")
 
 (deftask gorilla
   "Start the gorilla-repl server"
@@ -15,17 +15,19 @@
         port         (or port 4000)
         ip           (or ip "127.0.0.1")
         nrepl-port   (or nrepl-port 0)
-        project-name (or (:project env) "a standalone project")]
+        project-name (or (:project env) "a standalone project")
+        block        (or block true)]
     (comp
      (boot/with-pre-wrap fileset
        (boot.pod/with-eval-in env
-         (boot.pod/add-dependencies (assoc boot.pod/env :depenencies '[[sooheon/gorilla-repl "0.4.1-SNAPSHOT"]]))
+         (boot.pod/add-dependencies
+          (assoc boot.pod/env :depenencies '[[sooheon/gorilla-repl ~gorilla-version]]))
          (require '[gorilla-repl.core :as g])
-         (g/run-gorilla-server {:port ~port
-                                :ip ~ip
+         (g/run-gorilla-server {:port       ~port
+                                :ip         ~ip
                                 :nrepl-port ~nrepl-port
-                                :version ~gorilla-version
-                                :project ~project-name})
+                                :version    ~gorilla-version
+                                :project    ~project-name})
          (boot.util/info "<< started Gorilla REPL on http://%s:%d >>\n" ~ip ~port))
        fileset)
      (if block
